@@ -43,3 +43,29 @@ function judge (root) {
   }
 }
 judge(root);
+function sym (root) {
+  if (!root) {
+    return true;
+  }
+  var newTree = recursive(root);
+
+  function judge (tree1, tree2) {
+    if (tree1 == tree2) {
+    }
+  }
+  function revertTree (tree) {
+    if (!tree) {
+      return
+    }
+    [tree.left, tree.right] = [tree.right, tree.left];
+    recursive(tree.left);
+    recursive(tree.right);
+    return tree;
+  }
+  function recursive (tree) {
+    if (!tree) {
+      return tree;
+    }
+    return tree.left && recursive(tree.left) == tree.right && recursive(tree.right);
+  }
+}
